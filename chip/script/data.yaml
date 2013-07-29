@@ -1,0 +1,155 @@
+chip-seq:
+- name: TriWt
+  type: H3K4me3
+  genotype: WT
+  stage: e15-5
+  fastq: 
+  bam: /media/KwokRaid02/pipeline-output/120303-Olga-histone-Chip/TriWt_R1_fastq_120303_Olga-ChIP-sort.bam
+- name: TriMut
+  type: H3K4me3
+  genotype: mutant
+  stage: e15-5
+  fastq: 
+  bam: /media/KwokRaid02/pipeline-output/120303-Olga-histone-Chip/TriMut_R1_fastq_120303_Olga-ChIP-sort.bam
+- name: TriInp
+  type: [H3K4me3, input]
+  genotype: WT
+  stage: e15-5
+  fastq: 
+  bam: /media/KwokRaid02/pipeline-output/120303-Olga-histone-Chip/TriInp_R1_fastq_120303_Olga-ChIP-sort.bam
+- name: MonoWt
+  type: [H3K4me1]
+  genotype: WT
+  stage: e15-5 
+  fastq: 
+  bam: /media/KwokRaid02/pipeline-output/120303-Olga-histone-Chip/MonoWt_R1_fastq_120303_Olga-ChIP-sort.bam
+- name: MonoMut
+  type: [H3K4me1]
+  genotype: mutant
+  stage: e15-5
+  fastq: 
+  bam: /media/KwokRaid02/pipeline-output/120303-Olga-histone-Chip/MonoMut_R1_fastq_120303_Olga-ChIP-sort.bam
+- name: MonoInp
+  type: [e15-5, H3K4me1, input]
+  genotype: WT
+  stage: e15-5
+  fastq: 
+  bam: /media/KwokRaid02/pipeline-output/120303-Olga-histone-Chip/MonoInp_R1_fastq_120303_Olga-ChIP-sort.bam
+
+# this is a comment
+# mutant triplicates?
+- name: 7-7-2a
+  type: [HDAC2]
+  genotype: mutant #what kind of mutant?
+  stage: e15-5  
+  fastq: /media/KwokData02/Paul-tmp/Project_Rubenstein-Lab-OGp6/Sample_AcK27-7-2-mut2
+  bam: /media/KwokRaid02/pipeline-output/20130607-Rubenstein-Lab-OGp6-AcK27-7-2-mut2/AcK27-7-2-mut2_20130607_Rubenstein-Lab-OGp6-sort.bam
+- name: 7-2-2b
+  type: HDAC2
+  stage: e15-5  
+  genotype: mutant #what kind of mutant?
+  fastq: /media/KwokData02/Paul-tmp/Project_Rubenstein-Lab-OGp6/Sample_AcK27-2-2-mut1
+  bam: /media/KwokRaid02/pipeline-output/20130607-Rubenstein-Lab-OGp6-AcK27-2-2-mut1/AcK27-2-2-mut1_20130607_Rubenstein-Lab-OGp6-sort.bam
+- name: 7-2-2c
+  type: [HDAC2, input]
+  genotype: mutant #what kind of mutant?
+  stage: e15-5
+  fastq: /media/KwokData02/Paul-tmp/Project_Rubenstein-Lab-OGp6/Sample_AcK27-2-2-mut-input
+  bam: /media/KwokRaid02/pipeline-output/20130607-Rubenstein-Lab-OGp6-AcK27-2-2-mut-input/AcK27-2-2-mut-input_20130607_Rubenstein-Lab-OGp6-sort.bam
+# WT triplicates?
+- name: 7-9-2
+  type: [HDAC2, input]
+  genotype: WT
+  stage: e15-5
+  fastq: /media/KwokData02/Paul-tmp/Project_Rubenstein-Lab-OGp6/Sample_Ack27-9-2-wt-input
+  bam: /media/KwokRaid02/pipeline-output/20130607-Rubenstein-Lab-OGp6-Ack27-9-2-wt-input/Ack27-9-2-wt-input_20130607_Rubenstein-Lab-OGp6-sort.bam
+- name: 7-9-2
+  type:  [HDAC2]
+  genotype: WT
+  stage: e15-5
+  fastq: /media/KwokData02/Paul-tmp/Project_Rubenstein-Lab-OGp6/Sample_AcK27-9-2-wt2
+  bam: /media/KwokRaid02/pipeline-output/20130607-Rubenstein-Lab-OGp6-AcK27-9-2-wt2/AcK27-9-2-wt2_20130607_Rubenstein-Lab-OGp6-sort.bam
+- name: 7-5-1
+  type: HDAC2
+  genotype: WT
+  stage: e15-5
+  fastq: /media/KwokData02/Paul-tmp/Project_Rubenstein-Lab-OGp6/Sample_AcK27-5-1-wt1
+  bam: /media/KwokRaid02/pipeline-output/20130607-Rubenstein-Lab-OGp6-AcK27-5-1-wt1/AcK27-5-1-wt1_20130607_Rubenstein-Lab-OGp6-sort.bam
+
+#the following three is for Dlx2?
+- name: Dlx2-positive
+  type: [e15-5 ,Dlx2-positive]
+  genotype: WT
+  stage: e15-5
+  fastq: /media/KwokData02/Paul-tmp/Project_Rubenstein-Lab-SL3/Sample_ChIP-Dlx2-positive
+  bam: /media/KwokRaid02/pipeline-output/20130607-Rubenstein-Lab-SL3-ChIP-Dlx2-positive/ChIP-Dlx2-positive_20130607_Rubenstein-Lab-SL3-sort.bam
+- name: Dlx2-negative
+  type: [e15-5 ,Dlx2-negative]
+  genotype: WT
+  stage: e15-5
+  fastq: /media/KwokData02/Paul-tmp/Project_Rubenstein-Lab-SL3/Sample_ChIP-Dlx2-negative
+  bam: /media/KwokRaid02/pipeline-output/20130607-Rubenstein-Lab-SL3-ChIP-Dlx2-negative/ChIP-Dlx2-negative_20130607_Rubenstein-Lab-SL3-sort.bam
+- name: Dlx2-input
+  type: [e15-5 ,input , interneuron]
+  genotype: WT
+  stage: e15-5
+  fastq: /media/KwokData02/Paul-tmp/Project_Rubenstein-Lab-SL3/Sample_ChIP-input-interneuron
+  bam: /media/KwokRaid02/pipeline-output/20130607-Rubenstein-Lab-SL3-ChIP-input-interneuron/ChIP-input-interneuron_20130607_Rubenstein-Lab-SL3-sort.bam
+
+#the following is for Pbx?
+- name: Pbx-input-1
+  type: [Pbx-input]
+  genotype: WT
+  stage: e12-5
+  fastq: 
+  bam: /media/KwokRaid02/pipeline-output/120621-Olga-ChIP-seq/E12_input_R1_fastq_120621_Olga-TFSeq-sort.bam
+- name: Pbx-positive-1
+  type: [Pbx-positive]
+  genotype: WT
+  stage: e12-5
+  fastq: 
+  bam: /media/KwokRaid02/pipeline-output/120621-Olga-ChIP-seq/E12_pluR1_fastq_120621_Olga-TFSeq-sort.bam
+- name: Pbx-negative-1
+  type: [Pbx-negative]
+  genotype: WT
+  stage: e12-5
+  fastq: 
+  bam: /media/KwokRaid02/pipeline-output/120621-Olga-ChIP-seq/E12_minuR1_fastq_120621_Olga-TFSeq-sort.bam
+
+- name: Pbx-input-2
+  type: [Pbx-input]
+  genotype: WT
+  stage: e15-5
+  fastq: 
+  bam: /media/KwokRaid02/pipeline-output/120621-Olga-ChIP-seq/E15_input_R1_fastq_120621_Olga-TFSeq-sort.bam
+- name: Pbx-positive-2
+  type: [Pbx-positive]
+  genotype: WT
+  stage: e15-5
+  fastq: 
+  bam: /media/KwokRaid02/pipeline-output/120621-Olga-ChIP-seq/E15_pluR1_fastq_120621_Olga-TFSeq-sort.bam
+- name: Pbx-negative-2
+  type: [Pbx-negative]
+  genotype: WT
+  stage: e15-5
+  fastq: 
+  bam: /media/KwokRaid02/pipeline-output/120621-Olga-ChIP-seq/E15_minuR1_fastq_120621_Olga-TFSeq-sort.bam
+
+- name: Pbx-input-3
+  type: [Pbx-input]
+  genotype: WT
+  stage: e15-5
+  fastq: /media/KwokData02/Paul-tmp/Project_Rubenstein-Lab-SL3/Sample_ChIP-input-e15-5
+  bam: /media/KwokRaid02/pipeline-output/20130607-Rubenstein-Lab-SL3-ChIP-input-e15-5/ChIP-input-e15-5_20130607_Rubenstein-Lab-SL3-sort.bam
+- name: Pbx-positive-3
+  type: [Pbx-positive]
+  genotype: WT
+  stage: e15-5
+  fastq: /media/KwokData02/Paul-tmp/Project_Rubenstein-Lab-SL3/Sample_ChIP-Pbx-e15-5-positive
+  bam: /media/KwokRaid02/pipeline-output/20130607-Rubenstein-Lab-SL3-ChIP-Pbx-e15-5-positive/ChIP-Pbx-e15-5-positive_20130607_Rubenstein-Lab-SL3-sort.bam
+- name: Pbx-negative-3
+  type: [Pbx-negative]
+  genotype: WT
+  stage: e15-5
+  fastq: /media/KwokData02/Paul-tmp/Project_Rubenstein-Lab-SL3/Sample_ChIP-Pbx-e15-5-negative
+  bam: /media/KwokRaid02/pipeline-output/20130607-Rubenstein-Lab-SL3-ChIP-Pbx-e15-5-negative/ChIP-Pbx-e15-5-negative_20130607_Rubenstein-Lab-SL3-sort.bam
