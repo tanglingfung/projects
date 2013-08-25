@@ -17,22 +17,76 @@ def create_tag(bam, options, out_dir=None):
   	_do_run(' '.join(cmd))
 	return out_dir
 
-def findPeaks(test_tag_dir, style, control_tag_dir):
-Recommend Parameters for fixed width peaks (i.e. for motif finding):
-findPeaks Macrophage-H3K4me1/ -i Macrophage-IgG -size 1000 -minDist 2500 > output.txt
+def makeUCSCfile(tag_dir):
+	pass
+	#implement later
+	#http://biowhat.ucsd.edu/homer/ngs/ucsc.html
+# 	Script for automating the process of creating multiWig tracks
+# 
+#         Usage: makeMultiWigHub.pl <hubname> <genome> [options] -d <tag directory1> [tag directory2]...
+# 
+#         Special Options for bigWigs [choose one, don't combine]:
+#                 -normal (ChIP-Seq style, default)
+#                 -strand (Strand specific, for RNA-Seq and GRO-Seq)
+#                 -dnase (Special options for Crawford-lab style DNase-Seq)
+#                 -cage (Special options for CAGE/TSS-Seq)
+#                 -cpg (Special options for mCpG/CpG)
+# 
+#         Other options:
+#                 Whatever options you want to pass to makeUCSCfile
+#                 !!Warning!!: do not try to specify "-strand separate" - use the special option above.
+#                 Also, for the genome, do NOT use repeat version (mm9r) - use mm9 instead
+# 
+#         File options:
+#                 -force (overwrite existing hub)
+#                 -fsize <#> (limit the file size of the bigwig files to this value)
+#                 -url <URL> (URL directory -no filename- to tell UCSC where to look)
+#                 -webdir <directory> (name of directory to place resulting hub directory)
+# 
+#         Current url target (-url):         http://biowhat.ucsd.edu/hubs/
+#         Current web directory (-webDir):   /data/www/hubs/
 
-Recommend Parameters for variable length peaks (H3K4me1 at least).
-findPeaks Macrophage-H3K4me1/ -i Macrophage-IgG -region -size 1000 -minDist 2500 > output.txt
 
-
-	cmd = ["findPeaks", test_tag_dir, "-style", style, "-o auto", "-i", control_tag_dir]
+def findFocalPeaks4factor(test_tag_dir, control_tag_dir):
+	peaks = findPeaks(test_tag_dir, "factor", control_tag_dir)
+	focalpeakfile = os.path.join(test_tag_dir, "ERfocalPeaks.txt")
+	cmd = ["getFocalPeaks.pl",  peaks,  "0.90" , ">", focalpeakfile ]
 	_do_run(' '.join(cmd))
-	if style == 'factor':
-		return os.path.join(test_tag_dir, "peaks.txt")
-	if style == 'histone':
-		return os.path.join(test_tag_dir, "regions.txt")
-	if style == 'groseq':
-		return os.path.join(test_tag_dir, "transcripts.txt")
+	return focalpeakfile
+
+#Recommend Parameters for variable length peaks (H3K4me1 at least).
+#findPeaks Macrophage-H3K4me1/ -i Macrophage-IgG -region -size 1000 -minDist 2500 > output.txt
+
+#Recommend Parameters for fixed width peaks (i.e. for motif finding):
+#findPeaks Macrophage-H3K4me1/ -i Macrophage-IgG -size 1000 -minDist 2500 > output.txt
+def findHistonePeaks4motif(test_tag_dir, control_tag_dir):
+	return findPeaks(test_tag_dir, 'histone', control_tag_dir, False, 1000, 2500)	
+	
+#Recommend Parameters for variable length peaks (H3K4me1 at least).
+#findPeaks Macrophage-H3K4me1/ -i Macrophage-IgG -region -size 1000 -minDist 2500 > output.txt
+def findHistonePeaks(test_tag_dir, control_tag_dir):
+	return findPeaks(test_tag_dir, 'histone', control_tag_dir, True, 1000, 2500)	
+
+def findPeaks(test_tag_dir, style, control_tag_dir, region=False, size=150, minDist=370, outfile=''):
+
+	if outfile == '' and style == 'factor':
+		outfile = os.path.join(test_tag_dir, "peaks.txt")
+	if outfile == '' and style == 'histone':
+		if region is True:
+			outfile = os.path.join(test_tag_dir, "regions.txt")
+		else:
+			outfile = os.path.join(test_tag_dir, "regions_motif.txt")
+	if outfile == '' and style == 'groseq':
+		outfile = os.path.join(test_tag_dir, "transcripts.txt")
+	
+	cmd = ["findPeaks", test_tag_dir, "-style", style, "-o", outfile, "-size", size, "-minDist", minDist, "-i", control_tag_dir]
+	if region: 
+		cmd += ['-region']
+	
+	_do_run(' '.join(cmd))
+	return outfile
+
+
 #To run findPeaks, you will normally type:  
 
 #findPeaks <tag directory> -style <factor|histone|groseq> -o auto -i <control tag directory>
@@ -40,7 +94,7 @@ findPeaks Macrophage-H3K4me1/ -i Macrophage-IgG -region -size 1000 -minDist 2500
 # for factor chip
 #getFocalPeaks.pl <peak file> <focus % threshold> > focalPeaksOutput.txt
 
-i#.e. getFocalPeaks.pl ERpeaks.txt 0.90 > ERfocalPeaks.txt
+#i.e. getFocalPeaks.pl ERpeaks.txt 0.90 > ERfocalPeaks.txt
 
 #i.e. findPeaks ERalpha-ChIP-Seq/ -style factor -o auto -i Control-ChIP-Seq/
 
