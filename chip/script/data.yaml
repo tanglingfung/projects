@@ -1,4 +1,8 @@
-chip-seq:
+#This is histone chip.
+#This is an experiment that we have sequenced some time ago, done with no replicas. only once
+#(this is one of the methylation marks on histones: Tri-methyl-K4) has wt, mut and input.
+#We wanted to compare if there is any difference in peak profiles between mut and wt)
+histone:
 - name: TriWt
   type: H3K4me3
   genotype: WT
@@ -7,7 +11,7 @@ chip-seq:
   bam: /media/KwokRaid02/pipeline-output/120303-Olga-histone-Chip/TriWt_R1_fastq_120303_Olga-ChIP-sort.bam
 - name: TriMut
   type: H3K4me3
-  genotype: mutant
+  genotype: Pbx1-mutant
   stage: e15-5
   fastq: 
   bam: /media/KwokRaid02/pipeline-output/120303-Olga-histone-Chip/TriMut_R1_fastq_120303_Olga-ChIP-sort.bam
@@ -17,8 +21,10 @@ chip-seq:
   stage: e15-5
   fastq: 
   bam: /media/KwokRaid02/pipeline-output/120303-Olga-histone-Chip/TriInp_R1_fastq_120303_Olga-ChIP-sort.bam
-
-
+#This is histone chip.
+#This is an experiment that we have sequenced some time ago as well, done with no replicas. only once
+#(this is another one of the methylation marks on histones: Mono-methyl-K4) has wt, mut and input.
+#We wanted to compare if there is any difference in peak profiles between mut and wt)
 - name: MonoWt
   type: H3K4me1
   genotype: WT
@@ -27,7 +33,7 @@ chip-seq:
   bam: /media/KwokRaid02/pipeline-output/120303-Olga-histone-Chip/MonoWt_R1_fastq_120303_Olga-ChIP-sort.bam
 - name: MonoMut
   type: H3K4me1
-  genotype: mutant
+  genotype: Pbx1-mutant
   stage: e15-5
   fastq: 
   bam: /media/KwokRaid02/pipeline-output/120303-Olga-histone-Chip/MonoMut_R1_fastq_120303_Olga-ChIP-sort.bam
@@ -38,120 +44,119 @@ chip-seq:
   fastq: 
   bam: /media/KwokRaid02/pipeline-output/120303-Olga-histone-Chip/MonoInp_R1_fastq_120303_Olga-ChIP-sort.bam
 
-# this is a comment
-# mutant triplicates?
-- name: 7-7-2a
-  type: HDAC2
-  genotype: mutant #what kind of mutant?
-  stage: e15-5  
-  fastq: /media/KwokData02/Paul-tmp/Project_Rubenstein-Lab-OGp6/Sample_AcK27-7-2-mut2
-  bam: /media/KwokRaid02/pipeline-output/20130607-Rubenstein-Lab-OGp6-AcK27-7-2-mut2/AcK27-7-2-mut2_20130607_Rubenstein-Lab-OGp6-sort.bam
-- name: 7-2-2b
-  type: HDAC2
-  stage: e15-5  
-  genotype: mutant #what kind of mutant?
-  fastq: /media/KwokData02/Paul-tmp/Project_Rubenstein-Lab-OGp6/Sample_AcK27-2-2-mut1
-  bam: /media/KwokRaid02/pipeline-output/20130607-Rubenstein-Lab-OGp6-AcK27-2-2-mut1/AcK27-2-2-mut1_20130607_Rubenstein-Lab-OGp6-sort.bam
-- name: 7-2-2c
-  type: HDAC2-input
-  genotype: mutant #what kind of mutant?
-  stage: e15-5
-  fastq: /media/KwokData02/Paul-tmp/Project_Rubenstein-Lab-OGp6/Sample_AcK27-2-2-mut-input
-  bam: /media/KwokRaid02/pipeline-output/20130607-Rubenstein-Lab-OGp6-AcK27-2-2-mut-input/AcK27-2-2-mut-input_20130607_Rubenstein-Lab-OGp6-sort.bam
-# WT triplicates?
-- name: 7-9-2a
-  type: HDAC2-input
+#This is histone chip, stage is E12.5
+#This is a new experiment
+#Has two replicas.
+#(this is Acetylation mark on histones: acetyl-K27) 
+#Data has two wt, two mut ( Pbx1 mutant)  and two inputs ( one for wt and one for mut sample)
+#We wanted to compare of there is any difference in peak profiles between mut and wt. 
+- name: AcK27-5-1-wt1
+  type: acetyl-K27
   genotype: WT
-  stage: e15-5
-  fastq: /media/KwokData02/Paul-tmp/Project_Rubenstein-Lab-OGp6/Sample_Ack27-9-2-wt-input
-  bam: /media/KwokRaid02/pipeline-output/20130607-Rubenstein-Lab-OGp6-Ack27-9-2-wt-input/Ack27-9-2-wt-input_20130607_Rubenstein-Lab-OGp6-sort.bam
-- name: 7-9-2b
-  type:  HDAC2
-  genotype: WT
-  stage: e15-5
-  fastq: /media/KwokData02/Paul-tmp/Project_Rubenstein-Lab-OGp6/Sample_AcK27-9-2-wt2
-  bam: /media/KwokRaid02/pipeline-output/20130607-Rubenstein-Lab-OGp6-AcK27-9-2-wt2/AcK27-9-2-wt2_20130607_Rubenstein-Lab-OGp6-sort.bam
-- name: 7-5-1
-  type: HDAC2
-  genotype: WT
-  stage: e15-5
+  stage: e12-5
   fastq: /media/KwokData02/Paul-tmp/Project_Rubenstein-Lab-OGp6/Sample_AcK27-5-1-wt1
   bam: /media/KwokRaid02/pipeline-output/20130607-Rubenstein-Lab-OGp6-AcK27-5-1-wt1/AcK27-5-1-wt1_20130607_Rubenstein-Lab-OGp6-sort.bam
+- name: AcK27-9-2-wt2
+  type:  acetyl-K27
+  genotype: WT
+  stage: e12-5
+  fastq: /media/KwokData02/Paul-tmp/Project_Rubenstein-Lab-OGp6/Sample_AcK27-9-2-wt2
+  bam: /media/KwokRaid02/pipeline-output/20130607-Rubenstein-Lab-OGp6-AcK27-9-2-wt2/AcK27-9-2-wt2_20130607_Rubenstein-Lab-OGp6-sort.bam
+  
+- name: AcK27-7-2-mut1
+  type: acetyl-K27
+  stage: e12-5  
+  genotype: Pbx1-mutant 
+  fastq: /media/KwokData02/Paul-tmp/Project_Rubenstein-Lab-OGp6/Sample_AcK27-2-2-mut1
+  bam: /media/KwokRaid02/pipeline-output/20130607-Rubenstein-Lab-OGp6-AcK27-2-2-mut1/AcK27-2-2-mut1_20130607_Rubenstein-Lab-OGp6-sort.bam
+- name: AcK27-7-2-mut2
+  type: acetyl-K27
+  genotype: Pbx1-mutant 
+  stage: e12-5  
+  fastq: /media/KwokData02/Paul-tmp/Project_Rubenstein-Lab-OGp6/Sample_AcK27-7-2-mut2
+  bam: /media/KwokRaid02/pipeline-output/20130607-Rubenstein-Lab-OGp6-AcK27-7-2-mut2/AcK27-7-2-mut2_20130607_Rubenstein-Lab-OGp6-sort.bam
 
-#the following three is for Dlx2?
-#- name: Dlx2-positive
-#  type: Dlx2-positive
-#  genotype: WT
-#  stage: e15-5
-#  fastq: /media/KwokData02/Paul-tmp/Project_Rubenstein-Lab-SL3/Sample_ChIP-Dlx2-positive
-#  bam: /media/KwokRaid02/pipeline-output/20130607-Rubenstein-Lab-SL3-ChIP-Dlx2-positive/ChIP-Dlx2-positive_20130607_Rubenstein-Lab-SL3-sort.bam
-#- name: Dlx2-negative
-#  type: Dlx2-negative
-#  genotype: WT
-#  stage: e15-5
-#  fastq: /media/KwokData02/Paul-tmp/Project_Rubenstein-Lab-SL3/Sample_ChIP-Dlx2-negative
-#  bam: /media/KwokRaid02/pipeline-output/20130607-Rubenstein-Lab-SL3-ChIP-Dlx2-negative/ChIP-Dlx2-negative_20130607_Rubenstein-Lab-SL3-sort.bam
-#- name: Dlx2-input
-#  type: Dlx2-input #interneuron
-#  genotype: WT
-#  stage: e15-5
-#  fastq: /media/KwokData02/Paul-tmp/Project_Rubenstein-Lab-SL3/Sample_ChIP-input-interneuron
-#  bam: /media/KwokRaid02/pipeline-output/20130607-Rubenstein-Lab-SL3-ChIP-input-interneuron/ChIP-input-interneuron_20130607_Rubenstein-Lab-SL3-sort.bam
+#acetyl-K27-input, 1 for WT, 1 for mutant, can be treated as if they are the same)
+- name: Ack27-9-2-wt-input
+  type: acetyl-K27-input
+  genotype: WT
+  stage: e12-5
+  fastq: /media/KwokData02/Paul-tmp/Project_Rubenstein-Lab-OGp6/Sample_Ack27-9-2-wt-input
+  bam: /media/KwokRaid02/pipeline-output/20130607-Rubenstein-Lab-OGp6-Ack27-9-2-wt-input/Ack27-9-2-wt-input_20130607_Rubenstein-Lab-OGp6-sort.bam
+- name: AcK27-2-2-mut-input
+  type: acetyl-K27-input
+  genotype: Pbx1-mutant 
+  stage: e12-5
+  fastq: /media/KwokData02/Paul-tmp/Project_Rubenstein-Lab-OGp6/Sample_AcK27-2-2-mut-input
+  bam: /media/KwokRaid02/pipeline-output/20130607-Rubenstein-Lab-OGp6-AcK27-2-2-mut-input/AcK27-2-2-mut-input_20130607_Rubenstein-Lab-OGp6-sort.bam
 
-#the following is for Pbx?
-- name: Pbx-input-1
-  type: Pbx-input
+#This is Pbx1 chip.
+#This looks like an experiment that was sequenced some time ago or this could be a repeat ( replica, that was sequenced more recently)  that we want pair up with the the previous experiment to get more confidence in the experiment.
+#This is E12.5 embryonic day data. Has Plus antibody, minus antibody and input sample.
+factor:
+- name: Pbx1-input-1
+  type: Pbx1-input
   genotype: WT
   stage: e12-5
   fastq: 
   bam: /media/KwokRaid02/pipeline-output/120621-Olga-ChIP-seq/E12_input_R1_fastq_120621_Olga-TFSeq-sort.bam
-- name: Pbx-positive-1
-  type: Pbx-positive
+- name: Pbx1-positive-1
+  type: Pbx1-positive
   genotype: WT
   stage: e12-5
   fastq: 
   bam: /media/KwokRaid02/pipeline-output/120621-Olga-ChIP-seq/E12_pluR1_fastq_120621_Olga-TFSeq-sort.bam
-- name: Pbx-negative-1
-  type: Pbx-negative
+- name: Pbx1-negative-1
+  type: Pbx1-negative
   genotype: WT
   stage: e12-5
   fastq: 
   bam: /media/KwokRaid02/pipeline-output/120621-Olga-ChIP-seq/E12_minuR1_fastq_120621_Olga-TFSeq-sort.bam
 
-- name: Pbx-input-2
-  type: Pbx-input
+
+
+#This is Pbx1 chip.
+#This looks like an experiment that was sequenced some time ago or this could be a repeat ( replica, that was sequenced more recently, I am not sure)  that we want pair up with the previous experiment to get more confidence in the experiment.
+#This is E15.5 embryonic day data. Has Plus antibody, minus antibody and input sample.
+
+- name: Pbx1-input-2
+  type: Pbx1-input
   genotype: WT
   stage: e15-5
   fastq: 
   bam: /media/KwokRaid02/pipeline-output/120621-Olga-ChIP-seq/E15_input_R1_fastq_120621_Olga-TFSeq-sort.bam
-- name: Pbx-positive-2
-  type: Pbx-positive
+- name: Pbx1-positive-2
+  type: Pbx1-positive
   genotype: WT
   stage: e15-5
   fastq: 
   bam: /media/KwokRaid02/pipeline-output/120621-Olga-ChIP-seq/E15_pluR1_fastq_120621_Olga-TFSeq-sort.bam
-- name: Pbx-negative-2
-  type: Pbx-negative
+- name: Pbx1-negative-2
+  type: Pbx1-negative
   genotype: WT
   stage: e15-5
   fastq: 
   bam: /media/KwokRaid02/pipeline-output/120621-Olga-ChIP-seq/E15_minuR1_fastq_120621_Olga-TFSeq-sort.bam
 
-- name: Pbx-input-3
-  type: Pbx-input
+#This is Pbx1 chip.
+#that we want pair up with the previous experiment to get more confidence in the experiment. So perhaps this is a repeat and the one above this is an original sequencing data.
+#Again, this experiment has Plus antibody (positive), minus antibody (negative)  and input samples.
+
+- name: Pbx1-input-3
+  type: Pbx1-input
   genotype: WT
   stage: e15-5
   fastq: /media/KwokData02/Paul-tmp/Project_Rubenstein-Lab-SL3/Sample_ChIP-input-e15-5
   bam: /media/KwokRaid02/pipeline-output/20130607-Rubenstein-Lab-SL3-ChIP-input-e15-5/ChIP-input-e15-5_20130607_Rubenstein-Lab-SL3-sort.bam
-- name: Pbx-positive-3
-  type: Pbx-positive
+- name: Pbx1-positive-3
+  type: Pbx1-positive
   genotype: WT
   stage: e15-5
-  fastq: /media/KwokData02/Paul-tmp/Project_Rubenstein-Lab-SL3/Sample_ChIP-Pbx-e15-5-positive
-  bam: /media/KwokRaid02/pipeline-output/20130607-Rubenstein-Lab-SL3-ChIP-Pbx-e15-5-positive/ChIP-Pbx-e15-5-positive_20130607_Rubenstein-Lab-SL3-sort.bam
-- name: Pbx-negative-3
-  type: Pbx-negative
+  fastq: /media/KwokData02/Paul-tmp/Project_Rubenstein-Lab-SL3/Sample_ChIP-Pbx1-e15-5-positive
+  bam: /media/KwokRaid02/pipeline-output/20130607-Rubenstein-Lab-SL3-ChIP-Pbx1-e15-5-positive/ChIP-Pbx1-e15-5-positive_20130607_Rubenstein-Lab-SL3-sort.bam
+- name: Pbx1-negative-3
+  type: Pbx1-negative
   genotype: WT
   stage: e15-5
-  fastq: /media/KwokData02/Paul-tmp/Project_Rubenstein-Lab-SL3/Sample_ChIP-Pbx-e15-5-negative
-  bam: /media/KwokRaid02/pipeline-output/20130607-Rubenstein-Lab-SL3-ChIP-Pbx-e15-5-negative/ChIP-Pbx-e15-5-negative_20130607_Rubenstein-Lab-SL3-sort.bam
+  fastq: /media/KwokData02/Paul-tmp/Project_Rubenstein-Lab-SL3/Sample_ChIP-Pbx1-e15-5-negative
+  bam: /media/KwokRaid02/pipeline-output/20130607-Rubenstein-Lab-SL3-ChIP-Pbx1-e15-5-negative/ChIP-Pbx1-e15-5-negative_20130607_Rubenstein-Lab-SL3-sort.bam

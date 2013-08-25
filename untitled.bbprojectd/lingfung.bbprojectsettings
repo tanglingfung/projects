@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>EmbeddedEditorHidden:lingfung</key>
+	<false/>
+	<key>ExpandedEditorWidth:lingfung:displays([(0, 0), (1680, 1050)])</key>
+	<integer>850</integer>
+	<key>ExpandedItems:lingfung</key>
+	<array/>
+	<key>FileFilterMode:lingfung</key>
+	<integer>0</integer>
+	<key>OpenDocuments:lingfung</key>
+	<array/>
+	<key>OpenDocumentsExpanded</key>
+	<true/>
+	<key>OpenDocumentsVisible</key>
+	<true/>
+	<key>ProjectViewVisible</key>
+	<true/>
+	<key>RecentItems:lingfung</key>
+	<array>
+		<dict>
+			<key>Date</key>
+			<date>2013-07-29T08:08:01Z</date>
+			<key>Location</key>
+			<dict>
+				<key>BookmarkData</key>
+				<data>
+				Ym9va5QDAAAAAAQQMAAAAAAAAAAAAAAAAAAAAAAAAAAA
+				AAAAAAAAAAAAAAAAAAAAnAIAAAUAAAABAQAAVXNlcnMA
+				AAAIAAAAAQEAAGxpbmdmdW5nCAAAAAEBAABwcm9qZWN0
+				cwQAAAABAQAAY2hpcAYAAAABAQAAc2NyaXB0AAAIAAAA
+				AQEAAGhvbWVyLnB5GAAAAAEGAAAEAAAAFAAAACQAAAA0
+				AAAAQAAAAFAAAAAIAAAABAMAAIi5AAAAAAAACAAAAAQD
+				AAAi2A8AAAAAAAgAAAAEAwAA42K6BAAAAAAIAAAABAMA
+				AMQxugQAAAAACAAAAAQDAAALO7oEAAAAAAgAAAAEAwAA
+				+2m6BAAAAAAYAAAAAQYAAIAAAACQAAAAoAAAALAAAADA
+				AAAA0AAAAAgAAAAABAAAQbekWnoAAAAYAAAAAQIAAAEA
+				AAAAAAAADwAAAAAAAAAAAAAAAAAAAAQAAAADAwAABAAA
+				AAQAAAADAwAA9gEAAAoAAAABAQAAVW50aXRsZWQgMQAA
+				CAAAAAQDAAAAgOYIdwAAAAgAAAAABAAAQbZ2tvMAAAAk
+				AAAAAQEAADMwODhEODQ0LTkyRkMtMzE0OS05QjJELTgw
+				Q0M4NENCNzI4RBgAAAABAgAAgQAAAAEACADvPwAAAQAI
+				AAAAAAAAAAAAAQAAAAEBAAAvAAAAAAAAAAEFAAC1AAAA
+				AQIAAGUyM2UzMjBiN2VjZWEzN2JkZjIwZGU5ZGUzY2Qy
+				YmE0NjhjNDQ5ZmQ7MDAwMDAwMDA7MDAwMDAwMDAwMDAw
+				MDAyMDtjb20uYXBwbGUuYXBwLXNhbmRib3gucmVhZC13
+				cml0ZTswMDAwMDAwMTswMTAwMDAwMzswMDAwMDAwMDA0
+				YmE2OWZiOy91c2Vycy9saW5nZnVuZy9wcm9qZWN0cy9j
+				aGlwL3NjcmlwdC9ob21lci5weQAAAADAAAAA/v///wEA
+				AAAAAAAADwAAAAQQAABgAAAAAAAAAAUQAADgAAAAAAAA
+				ABAQAAAQAQAAAAAAAEAQAAAAAQAAAAAAAAIgAADIAQAA
+				AAAAABAgAABIAQAAAAAAABEgAAB8AQAAAAAAABIgAABc
+				AQAAAAAAABMgAABsAQAAAAAAACAgAACoAQAAAAAAADAg
+				AADUAQAAAAAAAAHAAAAwAQAAAAAAABHAAAAUAAAAAAAA
+				ABLAAAA8AQAAAAAAAIDwAADcAQAAAAAAAA==
+				</data>
+				<key>FileURL</key>
+				<string>file://localhost/Users/lingfung/projects/chip/script/homer.py</string>
+				<key>TypeID</key>
+				<string>_CFileLocator</string>
+				<key>Version</key>
+				<integer>1</integer>
+			</dict>
+		</dict>
+	</array>
+	<key>RecentItemsExpanded</key>
+	<true/>
+	<key>RecentItemsVisible</key>
+	<true/>
+	<key>ScratchpadItemsExpanded</key>
+	<true/>
+	<key>ScratchpadItemsVisible</key>
+	<true/>
+	<key>ShowSCMData:lingfung</key>
+	<false/>
+	<key>ToolbarVisible:lingfung</key>
+	<true/>
+	<key>ViewSplitterPosition:lingfung</key>
+	<real>0.18286813795566559</real>
+	<key>WindowFrame:lingfung:displays([(0, 0), (1680, 1050)])</key>
+	<string>rect(66,405,978,1444)</string>
+</dict>
+</plist>

@@ -84,7 +84,7 @@ upload:
 details:
   - files: [${fastq1}, ${fastq2}]
     description: ${description}
-    analysis: variant
+    analysis: variant2
     genome_build: GRCh37
     lane: ${sampleID}
     algorithm:
@@ -92,12 +92,15 @@ details:
       recalibrate: true
       realign: true
       mark_duplicates: picard
-      variantcaller: gatk
+      variantcaller: [gatk, gatk-haplotype]
       coverage_interval: exome
       coverage_depth: high
-      hybrid_bait: ${target}
-      hybrid_target: ${target}       
+      hybrid_target : ${target}
+      hybrid_target : ${target}      
+      clinical_reporting: true
 """
+
+
 def get_fs_freespace(pathname):
 	"Get the free space of the filesystem containing pathname"
 	stat= os.statvfs(pathname)

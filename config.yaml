@@ -1,0 +1,11 @@
+work_dir: /media/KwokData01/kwoklab-users/Paul/
+
+cutadapt:
+    program: cutadapt
+    chemistry: [truseq]
+    trim_polya: True
+    options:
+      error-rate: 0.1
+      quality-cutoff: 20
+homer:
+	program: 

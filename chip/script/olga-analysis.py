@@ -8,6 +8,8 @@ import shutil
 import datetime
 import re
 #import metaseq
+sys.path.insert(0, '../../utils/')
+import homer
 
 
 def subset(dataset, type):
@@ -19,14 +21,23 @@ def subset(dataset, type):
 
 def process_data(dataMap):
 	#print dataMap
-	dataset = dataMap["chip-seq"]#.get("num_cores")	
+	histone = dataMap["histone"]
+	factor = dataMap["factor"]	
 	
 	#get the datasets
-	H3K4me3 = subset(dataset, 'H3K4me3')
-	H3K4me1 = subset(dataset, 'H3K4me1')
-	Pbx1 = subset(dataset, 'Pbx1')
-	HDAC2 = subset(dataset, 'HDAC2')
+#(this is one of the methylation marks on histones: Tri-methyl-K4) has wt, mut and input.
+#We wanted to compare if there is any difference in peak profiles between mut and wt)
+	H3K4me3 = subset(histone, 'H3K4me3')
+#(this is another one of the methylation marks on histones: Mono-methyl-K4) has wt, mut and input.
+#We wanted to compare if there is any difference in peak profiles between mut and wt)	
+	H3K4me1 = subset(histone, 'H3K4me1')
+#Data has two wt, two mut ( Pbx1 mutant)  and two inputs ( one for wt and one for mut sample) 
+#We wanted to compare of there is any difference in peak profiles between mut and wt. 
+	acetyl = subset(histone, 'acetyl-K27')
 	
+	Pbx1 = subset(factor, 'Pbx1')
+	today = datetime.date.today().strftime("%Y%m%d")
+
 	# 1. use HOMER to 
 	# a)define peaks
 	# http://biowhat.ucsd.edu/homer/ngs/peaks.html
@@ -44,5 +55,4 @@ if __name__ == "__main__":
     	dataMap = yaml.safe_load(in_handle)
     	in_handle.close()
     process_data(dataMap)
-#    process_sample(options.source, options.dest, options.exome_target)
 

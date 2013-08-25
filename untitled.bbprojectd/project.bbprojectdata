@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>HierarchyData</key>
+	<array>
+		<string>58641151-A52A-493F-92DF-4E5D1C9D8B51</string>
+	</array>
+	<key>ProjectItems</key>
+	<dict>
+		<key>58641151-A52A-493F-92DF-4E5D1C9D8B51</key>
+		<dict>
+			<key>ItemData</key>
+			<dict>
+				<key>BookmarkData</key>
+				<data>
+				Ym9va7gDAAAAAAQQMAAAAAAAAAAAAAAAAAAAAAAAAAAA
+				AAAAAAAAAAAAAAAAAAAAqAIAAAUAAAABAQAAVXNlcnMA
+				AAAIAAAAAQEAAGxpbmdmdW5nCAAAAAEBAABwcm9qZWN0
+				cwQAAAABAQAAY2hpcAYAAAABAQAAc2NyaXB0AAAIAAAA
+				AQEAAGhvbWVyLnB5GAAAAAEGAAAEAAAAFAAAACQAAAA0
+				AAAAQAAAAFAAAAAIAAAABAMAAIi5AAAAAAAACAAAAAQD
+				AAAi2A8AAAAAAAgAAAAEAwAA42K6BAAAAAAIAAAABAMA
+				AMQxugQAAAAACAAAAAQDAAALO7oEAAAAAAgAAAAEAwAA
+				+2m6BAAAAAAYAAAAAQYAAIAAAACQAAAAoAAAALAAAADA
+				AAAA0AAAAAgAAAAABAAAQbekWnoAAAAYAAAAAQIAAAEA
+				AAAAAAAADwAAAAAAAAAAAAAAAAAAAAAAAAABBQAABAAA
+				AAMDAAADAAAABAAAAAMDAAAEAAAABAAAAAMDAAD2AQAA
+				CgAAAAEBAABVbnRpdGxlZCAxAAAIAAAABAMAAACA5gh3
+				AAAACAAAAAAEAABBtna28wAAACQAAAABAQAAMzA4OEQ4
+				NDQtOTJGQy0zMTQ5LTlCMkQtODBDQzg0Q0I3MjhEGAAA
+				AAECAACBAAAAAQAIAO8/AAABAAgAAAAAAAAAAAABAAAA
+				AQEAAC8AAAC1AAAAAQIAAGUyM2UzMjBiN2VjZWEzN2Jk
+				ZjIwZGU5ZGUzY2QyYmE0NjhjNDQ5ZmQ7MDAwMDAwMDA7
+				MDAwMDAwMDAwMDAwMDAyMDtjb20uYXBwbGUuYXBwLXNh
+				bmRib3gucmVhZC13cml0ZTswMDAwMDAwMTswMTAwMDAw
+				MzswMDAwMDAwMDA0YmE2OWZiOy91c2Vycy9saW5nZnVu
+				Zy9wcm9qZWN0cy9jaGlwL3NjcmlwdC9ob21lci5weQAA
+				AADYAAAA/v///wEAAAAAAAAAEQAAAAQQAABgAAAAAAAA
+				AAUQAADgAAAAAAAAABAQAAAQAQAAAAAAAEAQAAAAAQAA
+				AAAAAFUQAAA4AQAAAAAAAFYQAAAwAQAAAAAAAAIgAADc
+				AQAAAAAAABAgAABcAQAAAAAAABEgAACQAQAAAAAAABIg
+				AABwAQAAAAAAABMgAACAAQAAAAAAACAgAAC8AQAAAAAA
+				ADAgAAAwAQAAAAAAAAHAAABEAQAAAAAAABHAAAAUAAAA
+				AAAAABLAAABQAQAAAAAAAIDwAADoAQAAAAAAAA==
+				</data>
+				<key>FileURL</key>
+				<string>file://localhost/Users/lingfung/projects/chip/script/homer.py</string>
+				<key>RelativePath</key>
+				<string>./chip/script/homer.py</string>
+				<key>TypeID</key>
+				<string>_CFileLocator</string>
+				<key>Version</key>
+				<integer>1</integer>
+			</dict>
+			<key>ItemName</key>
+			<string>homer.py</string>
+			<key>ItemType</key>
+			<string>FileReference</string>
+		</dict>
+	</dict>
+	<key>com.barebones.DocumentFormatVersion</key>
+	<integer>5</integer>
+	<key>com.barebones.DocumentType</key>
+	<string>Project</string>
+</dict>
+</plist>
