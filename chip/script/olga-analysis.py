@@ -28,7 +28,7 @@ def process_data(dataMap):
 #(this is one of the methylation marks on histones: Tri-methyl-K4) has wt, mut and input.
 #We wanted to compare if there is any difference in peak profiles between mut and wt)
 	H3K4me3 = subset(histone, 'H3K4me3')
-	print H3K4me1
+	print H3K4me3
 #(this is another one of the methylation marks on histones: Mono-methyl-K4) has wt, mut and input.
 #We wanted to compare if there is any difference in peak profiles between mut and wt)	
 	H3K4me1 = subset(histone, 'H3K4me1')
